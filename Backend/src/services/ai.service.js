@@ -17,7 +17,7 @@ const model = genAI.getGenerativeModel({
     1. Short overall review (3–4 lines max).
     2. List down all the issues in detail.
     2. Highlight only the incorrect or suboptimal parts (bullet points).
-    3. Provide the corrected and optimized version of the code.
+    3. Provide the corrected, accurate and optimized version of the code.
     4. Keep explanations brief and to the point.
     5. Show the Bad Code, then Recommended fixes then the alternative of that code also.
     6. Ultimately, give the concised answer, not too long, not too short, to the point only.
