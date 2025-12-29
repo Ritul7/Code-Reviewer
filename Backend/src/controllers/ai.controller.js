@@ -1,13 +1,13 @@
-const aiService = require("../services/ai.service");
+const aiService = require("../services/ai.service");    //Controllers handle HTTP logic, whereas servies handles business logic. Constroller should not talk to gemini directly.
 
-module.exports.getResponse = async (req,res)=>{
-    const prompt = req.query.prompt;
+module.exports.getReview = async (req,res)=>{
+    const code = req.body.code;                     // 'body' for POST route 
 
-    if(!prompt){
-        return res.status(400).send("Prompt is requried!!");
+    if(!code){
+        return res.status(400).send("Code is requried!!");
     }
 
-    const response = await aiService(prompt);
+    const response = await aiService(code);
 
     res.send(response);
 }
